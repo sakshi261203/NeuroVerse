@@ -1,0 +1,407 @@
+/* Define theme variables */
+:root {
+    --bg-color: rgb(115,115,230);
+    --primary-btn: #5827d4;    /* Purple for primary actions */
+    --secondary-btn: #19074b;  /* Darker purple for hover/secondary states */
+    --text-color: #333;
+    --container-bg: #fff;
+    --border-radius: 8px;
+    --transition-speed: 0.3s;
+  }
+  
+  /* Global Styles */
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: var(--bg-color);
+    color: var(--text-color);
+    text-align: center;
+  }
+  
+  /* Container */
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100vw;
+    background: var(--bg-color);
+    padding: 20px;
+  }
+  
+  /* Title */
+  .title1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #fff;
+    margin-top:20px;
+  }
+  
+  /* Upload Container */
+  .upload-container {
+    background: var(--container-bg);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto 20px auto;
+    position: relative;
+    z-index: 10;
+  }
+  
+  /* Custom File Input */
+  /* Hide the native file input */
+  .file-input {
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+  }
+  
+  /* Styled label for file input - left aligned */
+  .custom-file-label {
+    display: block;
+    text-align: left;
+    padding: 12px 20px;
+    background-color: var(--bg-color);  /* Matches the theme background */
+    color: #fff;
+    font-size: 1rem;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color var(--transition-speed);
+    margin-bottom: 10px;
+  }
+  
+  .custom-file-label:hover {
+    background-color: rgb(95,95,210); /* Slightly darker for hover */
+  }
+  
+  /* Textarea styling */
+  .text-input {
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+  }
+  
+  /* Buttons */
+  .btn {
+    padding: 12px 20px;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-size: 1rem;
+    margin: 10px;
+    transition: background-color var(--transition-speed), transform var(--transition-speed);
+  }
+  
+  .btn:hover {
+    transform: scale(1.02);
+  }
+  
+  .generate-btn {
+    background-color: var(--primary-btn);
+    color: #fff;
+    width: calc(100% - 20px);
+    margin-top: 10px;
+  }
+  
+  .speech-btn {
+    background-color: var(--primary-btn);
+    color: #fff;
+  }
+  
+  .focus-btn {
+    background-color: var(--primary-btn);
+    color: #fff;
+  }
+  
+  /* Flashcard Container */
+  .flashcard-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--container-bg);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  
+  /* Flashcard Box */
+  .flashcard-box {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius);
+    background: #f9f9f9;
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+  }
+  
+  /* Flashcard Text */
+  .flashcard-text {
+    font-size: 1.2rem;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  /* Card Buttons */
+  .card-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+  }
+  
+  /* Progress Bar */
+  .progress-bar {
+    width: 100%;
+    height: 12px;  /* Thicker progress bar */
+    background-color: #f0f0f0;
+    border-radius: 6px;
+    margin-bottom: 20px;
+  }
+  
+  .progress-bar::-webkit-progress-bar {
+    background-color: #f0f0f0;
+    border-radius: 6px;
+  }
+  
+  .progress-bar::-webkit-progress-value {
+    background: var(--primary-btn);
+    border-radius: 6px;
+  }
+  
+  /* Navigation Buttons */
+  .navigation-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    margin-top: 15px;
+  }
+  
+  .nav-btn {
+    padding: 12px 24px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: var(--primary-btn);
+    color: #fff;
+    flex: 1;
+    margin: 0 5px;
+    transition: background-color var(--transition-speed);
+  }
+  
+  .nav-btn:hover:not(:disabled) {
+    background-color: var(--secondary-btn);
+  }
+  
+  .nav-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  /* Timer Settings and Display */
+  .timer-settings {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .timer-settings select {
+    font-size: 1rem;
+    padding: 5px;
+    border-radius: 5px;
+  }
+  
+  /* Timer Container for Session Duration */
+  .timer-container {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .timer-container label {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+    color: #fff;
+  }
+  
+  /* Style the session duration number input */
+  #session-duration {
+    font-size: 1rem;
+    padding: 10px 12px;
+    width: 100px;
+    border: 2px solid var(--primary-btn);
+    border-radius: var(--border-radius);
+    text-align: center;
+    background-color: var(--container-bg);
+    color: var(--text-color);
+    outline: none;
+    transition: border-color var(--transition-speed);
+  }
+  
+  /* Remove the default spinner in Webkit browsers (optional) */
+  #session-duration::-webkit-outer-spin-button,
+  #session-duration::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
+  /* Firefox support: Remove default appearance */
+  #session-duration {
+    -moz-appearance: textfield;
+  }
+  
+  #session-duration:focus {
+    border-color: var(--secondary-btn);
+  }
+  
+  .timer-display {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #fff;
+    background: var(--primary-btn);
+    padding: 8px 12px;
+    border-radius: var(--border-radius);
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  /* Session Progress Bar Container */
+  .session-progress-bar-container {
+    width: 100%;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+  
+  /* Session Progress Bar */
+  .session-progress-bar {
+    height: 100%;
+    background: #fff;
+    border-radius: 4px;
+    transition: width 1s linear;
+  }
+  
+  /* Session Mode Styles */
+  .session-container {
+    width: 100%;
+    height: 100vh;  /* Fill entire viewport height */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .session-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    color: #fff;
+  }
+  
+  /* Fullscreen Mode */
+  .fullscreen-mode {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  /* Flashcard Session Mode */
+  .session-container.fullscreen-mode {
+    background: #111;
+    color: #fff;
+    padding-top: 50px;
+  }
+  
+  /* Prevent distractions by hiding unnecessary elements in fullscreen */
+  .fullscreen-mode .upload-container,
+  .fullscreen-mode .timer-settings,
+  .fullscreen-mode .navigation-buttons {
+    display: none;
+  }
+  
+  /* Auto Next: Better alignment */
+  .auto-next-container {
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Space between checkbox and text */
+  }
+  
+  .auto-next-container input[type="checkbox"] {
+    transform: scale(1.2);
+    cursor: pointer;
+  }
+  
+  .auto-next-toggle {
+    background-color: var(--primary-btn);
+    color: #fff;
+    width: 100%;
+    margin-top: 10px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color var(--transition-speed);
+  }
+  
+  .auto-next-toggle:hover {
+    background-color: var(--secondary-btn);
+  }
+  
+  .motivational-quote {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #3319c7;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    border-radius: var(--border-radius);
+    margin-top: 10px;
+    width: 80%;
+    text-align: center;
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  /* Fade-in animation */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+ 

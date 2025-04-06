@@ -1,0 +1,96 @@
+.contact-container {
+    max-width: 800px;  /* Set proper width */
+    width: 200%;  /* Ensuring it stays as per your requirement */
+    position: absolute;  /* Absolute positioning for centering */
+    left: 50%;  /* Move to the center */
+    transform: translateX(-50%);  /* Ensure it's properly centered */
+    margin-top: 60px; /* Spacing from top */
+    padding: 30px;
+    background: #ffffff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    border-radius: 12px;
+    text-align: center;
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.contact-container h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #333;
+    font-weight: 600;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.contact-inp, .contact-text {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 17px;
+    transition: 0.3s ease-in-out;
+}
+
+.contact-inp:focus, .contact-text:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 7px rgba(0, 123, 255, 0.3);
+}
+
+.contact-text {
+    min-height: 140px;
+    resize: vertical;
+}
+
+.contact-btn {
+    background: #007bff;
+    color: #fff;
+    padding: 14px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    letter-spacing: 0.5px;
+}
+
+.contact-btn:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Responsive Styling */
+@media (max-width: 900px) {
+    .contact-container {
+        max-width: 95%; /* Adjust for smaller screens */
+        width: 100%; /* Ensures responsiveness */
+        position: static; /* Reset positioning for small screens */
+        transform: none;
+        margin: 60px auto;
+    }
+
+    .contact-inp, .contact-text {
+        font-size: 15px;
+    }
+
+    .contact-btn {
+        font-size: 16px;
+    }
+}
+

@@ -1,0 +1,205 @@
+/* General Styles */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #d4a5ff, #8360c3);
+    text-align: center;
+    transition: background 0.5s ease-in-out;
+  }
+  /* App Container */
+  .app-container {
+    width: 95%;
+    max-width: 600px;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    text-align: center;
+  }
+  .mood-tracker-container{
+    margin-top:100px;
+  }
+  /* Heading */
+  h1 {
+    font-size: 30px;
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 15px;
+  }
+  
+  /* Emotion Wheel */
+  .emotion-wheel {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding-top: 10px;
+  }
+  
+  .emotion-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 14px;
+  }
+  
+  .emotion-button {
+    font-size: 40px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease, filter 0.2s ease;
+  }
+  
+  .emotion-button:hover {
+    transform: scale(1.15);
+    filter: brightness(1.2);
+  }
+  
+  /* Mood Tracker */
+  .mood-tracker {
+    margin-top: 20px;
+    padding: 75px;
+    border-top: 3px solid #ddd;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    height:500px;
+  }
+  
+  .mood-tracker h2 {
+    font-size: 30px;
+    color: rgb(71, 9, 129);
+    font-weight: 600;
+    margin-top:-55px;
+    font-family: cursive;
+  }
+  
+  .track-button,
+  .clear-button {
+    margin: 10px;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+  }
+  
+  .track-button {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .clear-button {
+    background-color: #ff4d4d;
+    color: white;
+  }
+  
+  .track-button:hover {
+    background-color: #45a049;
+  }
+  
+  .clear-button:hover {
+    background-color: #cc0000;
+  }
+  
+  /* Chat Companion (Botpress Chatbot) */
+  .chatcompanion-container {
+    margin-top: 30px;
+    padding: 10px;
+    background: #f4f4f4;
+    border-radius: 10px;
+  }
+  
+  .chatcompanion-container h2 {
+    font-size: 22px;
+    color: #444;
+    font-weight: 600;
+  }
+  
+  .chatcompanion-container p {
+    font-size: 16px;
+    color: #555;
+  }
+  
+  /* Botpress Webchat Position */
+  #bp-webchat-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+  }
+  
+  /* Custom Chat Box (if needed) */
+  .chat-container {
+    width: 400px;
+    margin: 20px auto;
+    padding: 15px;
+    border-radius: 10px;
+    background: #f7f7f7;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+  }
+  
+  .chat-box {
+    height: 300px;
+    overflow-y: auto;
+    background: white;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .chat-message {
+    max-width: 75%;
+    padding: 8px 12px;
+    border-radius: 18px;
+    margin: 5px;
+    word-wrap: break-word;
+  }
+  
+  .chat-message.user {
+    align-self: flex-end;
+    background: #4caf50;
+    color: white;
+  }
+  
+  .chat-message.bot {
+    align-self: flex-start;
+    background: #e0e0e0;
+    color: black;
+  }
+  
+  .chat-input {
+    display: flex;
+    gap: 10px;
+  }
+  
+  textarea {
+    flex: 1;
+    resize: none;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:disabled {
+    background: gray;
+  }
